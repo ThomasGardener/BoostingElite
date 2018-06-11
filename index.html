@@ -8,6 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animate.css">
      <title>Hello, world!</title>
   </head>
   <body>
@@ -18,7 +19,7 @@
       <div class="bgImage">
       </div>
 
-      <nav class="navbar navbar-expand-lg navbar-dark">
+      <nav class="navbar navbar-expand-lg navbar-dark pt-lg-4">
         <div class="container">
         <a class="navbar-brand" href="#">Boosting Elite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,13 +28,13 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#"><img class="navIcon">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link btn" href="#"><img class="navIcon" src="Icons/home.svg">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Questions</a>
+              <a class="nav-link" href="#"><img class="navIcon" src="Icons/information.svg">F.A.Q</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#"><img class="navIcon"  src="Icons/tag.svg">Pricing</a>
             </li>
 
           </ul>
@@ -71,21 +72,27 @@
       <div class="row">
         <div class="col-4 d-flex flex-column font-weight-light justify-content-center pl-4 pt-4">
 
-          <div class="infoSegment text-left d-flex ml-5 pb-2">
+          <div class="infoSegment text-left d-flex ml-5 pb-2 linker">
             <div class="infoIcon shiftDown">
               <img class="iconSmall" src="Icons/trophy.svg">
             </div>
             <div class="infoText pl-3">
-            <h4>Wins Boost</h4>
+            <div class="arrow d-flex">
+            <h4 class="colorChange">Wins Boost</h4>
+            <img class="iconArrow ml-5 animated" src="Icons/next0.svg">
+            </div>
             <p>We will either play on your account or you will play with us to get your desired amount of wins</p>
             </div>
           </div>
-          <div class="infoSegment text-left d-flex ml-5 pt-3">
+          <div class="infoSegment text-left d-flex ml-5 pt-3 linker">
             <div class="infoIcon shiftDown">
               <img class="iconSmall" src="Icons/target.svg">
             </div>
             <div class="infoText pl-3">
-            <h4>Kill/Death Boost</h4>
+              <div class="arrow d-flex">
+              <h4 class="colorChange">Kill/Death Boost</h4>
+              <img class="iconArrow ml-5 animated" src="Icons/next3.svg">
+              </div>
             <p>We will earn on your account kills with minimal deaths to increase your leaderboard and tracker stats</p>
             </div>
           </div>
@@ -97,21 +104,27 @@
         </div>
         <div class="col-4 d-flex flex-column font-weight-light justify-content-center pl-4 pt-4">
 
-          <div class="infoSegment text-left d-flex mr-5 pb-2">
+          <div class="infoSegment text-left d-flex mr-5 pb-2 linker">
             <div class="infoIcon shiftDown">
               <img class="iconSmall" src="Icons/level.svg">
             </div>
             <div class="infoText pl-3">
-            <h4>Leveling Boost</h4>
+              <div class="arrow d-flex">
+              <h4 class="colorChange">Leveling Boost</h4>
+              <img class="iconArrow ml-5 animated" src="Icons/next1.svg">
+              </div>
             <p>We will play on your account until you reach the desired level. You will also gain extra wins, kills free of charge</p>
             </div>
           </div>
-          <div class="infoSegment text-left d-flex mr-5 pt-3">
+          <div class="infoSegment text-left d-flex mr-5 pt-3 linker">
             <div class="infoIcon shiftDown">
-              <img class="iconSmall" src="Icons/challenge.svg">
+              <img class="iconSmall " src="Icons/challenge.svg">
             </div>
             <div class="infoText pl-3">
-            <h4>Challenges Boost</h4>
+              <div class="arrow d-flex">
+              <h4 class="colorChange">Challenges Boost</h4>
+              <img class="iconArrow ml-5 animated" src="Icons/next2.svg">
+              </div>
             <p>We will play on your account and complete any of the challenges you require and complete any amount of dailies for you</p>
             </div>
           </div>
@@ -181,7 +194,7 @@
         </div>
         </div>
         <div class="row pt-5">
-        <div class="col-4">
+        <div class="col-4 securitySegment">
           <div class="iconContainer mb-3">
           <div class="border mx-auto d-flex">
           <img class="icon d-block m-auto" src="Icons/security.svg"></img>
@@ -190,7 +203,7 @@
           <h3 class="display-5">Security for you</h3>
           <p>We ensure your account is secure by having only one booster complete your order and eliminating multiple IP changes. We also offer to boost via VPNs close to your location (if prefered by you).</p>
         </div>
-        <div class="col-4">
+        <div class="col-4 securitySegment">
           <div class="iconContainer mb-3">
           <div class="border mx-auto d-flex">
           <img class="icon d-block m-auto" src="Icons/private.svg"></img>
@@ -199,7 +212,7 @@
           <h3 class="display-5">Privacy for you</h3>
           <p>Our boosters are well respected and trustworthy players in the fortnite community. Your account infomation will only be disclosed to your booster and will become unavailable after your order is complete</p>
         </div>
-        <div class="col-4">
+        <div class="col-4 securitySegment">
           <div class="iconContainer mb-3">
           <div class="border mx-auto d-flex">
           <img class="icon d-block m-auto" src="Icons/text.svg"></img>
@@ -380,5 +393,6 @@ This website is not endorsed by, affiliated with, or representative of Epic Game
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="webJS.js"></script>
   </body>
 </html>

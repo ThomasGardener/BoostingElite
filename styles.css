@@ -19,6 +19,47 @@ header {
 
 }
 
+.iconArrow {
+  height: 30px;
+  width: 30px;
+  margin-top: -4px;
+  display: none;
+  /* transition-property: opacity;
+  transition-duration: 0.3s; */
+
+
+}
+
+.linker:hover {
+  cursor: pointer;
+}
+
+.winColor {
+  color: #5099ec;
+}
+
+.killsColor {
+  color: #c74442;
+}
+
+.ChallengesColor {
+  color: #f76819;
+}
+
+.levelingColor {
+  color: #922fc3;
+}
+
+
+.arrow {
+  margin-bottom: 9px;
+}
+
+.arrow h4 {
+  transition-property: color;
+  transition-duration: 0.2s;
+}
+
 .speechBubble::after {
   content: "";
   position: absolute;
@@ -51,6 +92,10 @@ hr {
   border-color: white;
 }
 
+.iconContainer {
+  transition: transform 0.5s;
+}
+
 .border {
   height: 70px;
   width: 70px;
@@ -58,6 +103,7 @@ hr {
   border-style: none !important;
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
+
 
 #listen {
   position: absolute;
@@ -86,12 +132,27 @@ hr {
   color: #f7505a;
 }
 
+.bigRound:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .headerRound {
   border-style: none;
   border-radius: 40px;
   width: 130px;
   height: 40px;
   font-family: inherit;
+}
+
+.lightBlue:hover {
+  background-color: #087cb2;
+  color: #fff;
+}
+
+.lightRed:hover {
+  background-color: #c1363e;
+  color: #fff;
 }
 /*
 .squareButton {
@@ -102,6 +163,34 @@ hr {
   font-family: inherit;
 } */
 
+.navIcon {
+  width: 16px;
+  height: 16px;
+  margin-top: -4px;
+  margin-right: 8px;
+
+
+}
+
+.navbar .active {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-radius: 3px;
+}
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-radius: 3px;
+}
+
+.nav-item {
+  margin-left: 5px;
+  padding-left: 8px;
+  padding-right: 10px;
+  padding-top: 1px;
+}
+.nav-link{
+  color: #fff !important;
+  font-size: 0.8rem;
+}
 .lightBlue {
   /* background-color: #50BFE6; */
   background-color: #1092ce;
@@ -203,6 +292,7 @@ hr {
 
 .shiftDown {
   /* margin-top: px; */
+  margin-top: -2px;
 }
 
 .container {
@@ -269,7 +359,7 @@ h4 {
   font-size: 1.3rem;
 }
 
-p {
+p, .navbar {
   font-family: "SairaLight";
   color: #666666;
   font-size: 1.1rem;
