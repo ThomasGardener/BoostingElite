@@ -1,11 +1,19 @@
+#range {
+  max-width: 200px;
+}
 
-
-
+.selection {
+  margin-bottom: 8px;
+}
 
 #rangeSelection {
   display: none;
 }
 
+.dicountCode input
+{
+  padding-left: 5px;
+}
 
 .typeIcon {
   width: 100px;

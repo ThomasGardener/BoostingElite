@@ -1,5 +1,4 @@
 let infoSegments = document.getElementsByClassName("linker");
-
 let icons = [];
 let text = [];
 let hexVals = ["#5099ec", "#c74442", "#922fc3", "#f76819"];
@@ -18,13 +17,12 @@ for (let i = 0; i < securitySegments.length; i++) {
   securitySegments[i].addEventListener("mouseenter", () => {
   circles[i][0].style.transform = "translateY(-7px)";
   circles[i][0].firstElementChild.style.boxShadow = `0px 3px 35px ${glowVals[i]}`;
-  console.log("hello");
   })
   securitySegments[i].addEventListener("mouseleave", () => {
   circles[i][0].style.transform = "translateY(7px)";
   circles[i][0].firstElementChild.style.boxShadow = "0px 3px 15px rgba(0,0,0,0.2)";
-  console.log("hello");
   })
+
 }
 
 
@@ -37,8 +35,6 @@ for (let i = 0; i < infoSegments.length; i++) {
 // let levelIcon = infoSegments[2].getElementsByClassName("iconArrow");
 // let challengeIcon = infoSegments[3].getElementsByClassName("iconArrow");
 
-console.log(icons[0]);
-console.log(text);
 
 
 //
@@ -51,7 +47,7 @@ infoSegments[i].addEventListener("mouseover", () => {
   icons[i][0].style.display = "block"
   icons[i][0].classList.add("fadeIn");
   text[i][0].style.color = hexVals[i];
-  console.log("working");
+
 
 })
 
@@ -60,4 +56,9 @@ infoSegments[i].addEventListener("mouseout", () => {
     icons[i][0].classList.add("fadeOutRight");
     text[i][0].style.color = "inherit";
 })
+
+infoSegments[i].addEventListener("click", () => {
+    document.getElementById("redirectJS").click();
+})
+
 }
