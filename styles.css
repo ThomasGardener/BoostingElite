@@ -3,6 +3,7 @@
 /* CF3E3E */
 header {
   max-height: 500px;
+  min-height: 420px;
 }
 .icon {
   height: 30px;
@@ -28,6 +29,27 @@ header {
   transition-duration: 0.3s; */
 
 
+}
+
+
+
+/* ol li {
+  font-size: 1.3rem;
+  font-family: "SairaBold";
+}
+
+li {
+  list-style: none;
+  padding-bottom: 7 px;
+}
+
+ol {
+  padding-left: 0;
+} */
+.dropButton {
+  background: none;
+  border: none;
+  width: 100%;
 }
 
 .linker:hover {
@@ -104,6 +126,24 @@ hr {
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
+.glowShadow {
+    box-shadow: 0px 3px 15px rgba(255,255,255,0.2);
+    border-radius: 100%;
+}
+
+.glowShadow:hover {
+    box-shadow: 0px 3px 25px rgba(255,255,255,0.4);
+    border-radius: 100%;
+}
+
+.glowBox {
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+
+}
+
+
 
 #listen {
   position: absolute;
@@ -121,6 +161,16 @@ hr {
 #purchase .container {
   height: 100%
 }
+
+button {
+  outline: none;
+}
+
+button:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+
 
 .bigRound {
   background-color: white;
