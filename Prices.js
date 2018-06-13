@@ -21,8 +21,7 @@ let title = document.getElementById("mainSelectionHeader") /////change
 let information = document.getElementById("whatYouGetInformation");
 let currencyValue = document.getElementById("currencyValue");
 
-
-
+let paypalButton = document.getElementById("purchaseContact")
 
 
 sliderStarting.disabled = true;
@@ -821,6 +820,153 @@ selfPlaySwitch.addEventListener("input", () => {
     additionalCost.innerHTML = `+${extrasIncrease}%`;
   }
 }
+})
+
+function description(ServiceType) {
+  return `${slider.value} ServiceType`;
+}
+
+
+paypalButton.addEventListener("click", () => {
+
+  let serviceType = "";
+  let initialPrice = totalPrice.innerHTML;
+  let calculatedPrice;
+  let confirmCurrency;
+  if (currentSelection === 0)
+  {
+    winsFunction.call(slider);
+    if (startCounter === 0)
+    {
+    serviceType = `${slider.value} Solo Wins `;
+    }
+    if (startCounter === 1)
+    {
+      if (selfPlaySwitch.checked){
+    serviceType = `${slider.value} Self Play Duo Wins `;
+    }
+    else {
+      serviceType = `${slider.value} Duo Wins `;
+    }
+    }
+  }
+  else if (currentSelection === 1)
+  {
+    KDAFunction.call(slider);
+    if (startCounter === 0)
+    {
+    serviceType = `${slider.value} Solo Kills `;
+    }
+    if (startCounter === 1)
+    {
+    serviceType = `${slider.value} Duo Kills `;
+    }
+  }
+  else if (currentSelection === 2)
+  {
+    calculateWhenStopped.call(slider);
+    serviceType = `Level ${sliderStartingRange.value} to ${slider.value}`;
+  }
+  else if (currentSelection === 3)
+  {
+    calculateWhenStoppedPackage.call(slider);
+    if (startCounter === 0) {
+    serviceType = `Level ${slider.value} to 80 OmegaPackage`;
+    }
+    else if (startCounter === 1) {
+      serviceType = `Level ${slider.value} to 65 CarbidePackage`;
+    }
+  }
+  else if (currentSelection === 4)
+  {
+    challengeFunction.call(slider);
+    if (startCounter === 0)
+    {
+      serviceType = `${slider.value} Challenges`;
+    }
+    if (startCounter === 1)
+    {
+      serviceType = `${slider.value} Dailies`;
+    }
+  }
+  else if (currentSelection === 5) {
+    coachingFunction.call(slider);
+    if (startCounter === 0)
+    {
+    serviceType = `${slider.value} Hours with Tom`;
+    }
+    if (startCounter === 1)
+    {
+      serviceType = `${slider.value} Hours with Maz`;
+    }
+  }
+
+  let confirmationPrice = totalPrice.innerHTML;
+
+  if (initialPrice === confirmationPrice)
+  {
+    if(convertIcon === confirmationPrice.charAt(0)) {
+      let currencyType = "GBP";
+      if(convertIcon === GDPIcon)
+      {
+        currencyType = "GBP";
+      }
+      else if (convertIcon === USDIcon)
+      {
+        currencyType = "USD";
+      }
+      else if (convertIcon === EUROIcon)
+      {
+        currencyType = "EUR";
+      }
+
+    // console.log(serviceType);
+    // console.log(confirmationPrice.substring(1));
+    // console.log(confirmationPrice.charAt(0));
+    // console.log(currencyType);
+
+
+    modalBody.innerHTML = `<p>Service: <span class="boldFont">${serviceType}</span></p><p>Cost: <span class="boldFont">${confirmationPrice}</span></p>
+      <p><i>Enter your Epic Games Username and Password into the paypal note field</i></p>`
+
+    let paypalLink = document.getElementById("paypalLink");
+    // let someFunkyButton = document.createElement("BUTTON");
+//     someFunkyButton.innerHTML = `<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+// <input type="hidden" name="cmd" value="_xclick">
+// <input type="hidden" name="business" value="8JLGL6ZN8ABR4">
+// <input type="hidden" name="lc" value="GB">
+// <input type="hidden" name="item_name" value="${serviceType}">
+// <input type="hidden" name="amount" value="${confirmationPrice.substring(1)}">
+// <input type="hidden" name="currency_code" value="GBP">
+// <input type="hidden" name="button_subtype" value="services">
+// <input type="hidden" name="no_note" value="0">
+// <input type="hidden" name="cn" value="Add username and password here">
+// <input type="hidden" name="no_shipping" value="1">
+// <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+// <input type="image" src="https://www.paypalobjects.com/en_US/GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+// <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+// </form>`
+paypalLink.innerHTML = `<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="8JLGL6ZN8ABR4">
+<input type="hidden" name="lc" value="GB">
+<input type="hidden" name="item_name" value="${serviceType}">
+<input type="hidden" name="amount" value="${confirmationPrice.substring(1)}">
+<input type="hidden" name="currency_code" value="${currencyType}">
+<input type="hidden" name="button_subtype" value="services">
+<input type="hidden" name="no_note" value="0">
+<input type="hidden" name="cn" value="Add username and password here">
+<input type="hidden" name="no_shipping" value="1">
+<input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
+<input type="image" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+</form>`
+
+  }
+
+  }
+
+
 })
 
 

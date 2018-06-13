@@ -30,7 +30,7 @@
 
       <nav class="navbar navbar-expand-lg navbar-dark pt-lg-4">
         <div class="container">
-        <a class="navbar-brand" href="#">Boosting Elite</a>
+        <a class="navbar-brand" href="index.html">Boosting Elite</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -116,7 +116,7 @@
         <span><b>QUEUE TYPE</b></span>
         <div class="addLeftRight justify-content-center" id="imageSelection">
           <img class="leftArrow my-auto mr-2" src="Icons/leftArrow.svg">
-          <img class="typeIcon" id="queueTypeImage" src="Icons/solo.svg">
+          <img class="typeIcon" id="queueTypeImage" src="Icons/Solo.svg">
           <img class="rightArrow my-auto ml-2" src="Icons/rightArrow.svg">
         </div>
         <div class="rangeField flexCenter mt-4" id="rangeSelection">
@@ -241,8 +241,33 @@
         </div>
         <!-- <div class="priceDivider mt-2 mb-4">
         </div> -->
-        <div class="purchase d-flex">
-          <button><a id="purchaseContact" href="javascript:void(Tawk_API.toggle())">Purchase</a></button>
+        <div class="purchase d-flex" id="someTesting">
+          <!-- <button id="purchaseContact">Purchase</button> -->
+          <button type="button" id="purchaseContact" data-toggle="modal" data-target="#paymentModal">
+  Purchase
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="ModalTitle">Confirmation</h4>
+        <button class="close" id="closeModal" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" id="modalBody">
+        <p>*Enter your Epic Games Username and Password into the paypal note field</p>
+      </div>
+      <div class="modal-footer d-flex" id="modal-footer">
+        
+        <div id="paypalLink">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           <select class="endFlex" id="currencyValue" name="currencyDrop">
             <option value="EURO">€ EUR</option>
             <option value="USD">$ USD</option>

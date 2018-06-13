@@ -43,6 +43,7 @@
   box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 }
 
+
 .selection {
     background-color: #eee;
     border-style: none;
@@ -289,4 +290,13 @@ input[type=range]:focus::-ms-fill-lower {
 }
 input[type=range]:focus::-ms-fill-upper {
   background: #DBDBDB;
+}
+
+#closeModal {
+  background-color: white;
+}
+
+.close {
+  height: 44px !important;
+
 }
